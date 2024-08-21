@@ -39,3 +39,8 @@ ipython_config.py
 
 Data/
 *.pth
+Basecode/datasets
+Basecode/runs
+Basecode/data.yaml
+Basecode/*.pt
+outputs/
