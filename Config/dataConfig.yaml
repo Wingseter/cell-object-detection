@@ -1,0 +1,6 @@
+data_path: "/Users/kwon/Workspace/Python/cell-detection-yolo/Data/nuinsseg"  # Combine Data with parent path
+yolo_train_path: '/Users/kwon/Workspace/Python/cell-detection-yolo/Data/nuinsseg_yolo/train' # train path
+yolo_val_path: '/Users/kwon/Workspace/Python/cell-detection-yolo/Data/nuinsseg_yolo/val' # validation path
+yaml_path: '/Users/kwon/Workspace/Python/cell-detection-yolo/Data/nuinsseg_yolo/data.yaml'
+seed: 2024
+train_valid_ratio: 0.2 # 0.8: 0.2
