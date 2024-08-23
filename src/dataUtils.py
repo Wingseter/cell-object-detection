@@ -171,39 +171,52 @@ def create_yolo_yaml(train_path, val_path, save_path):
         f.write(yaml_content)
 
 
-def mkdir_yolo_data(train_path, val_path):
+from pathlib import Path
+
+def mkdir_yolo_data(train_path, val_path, test_path):
     """
-    make yolo data's directories
+    Make YOLO data's directories for train, validation, and test sets.
     
-    parameters
+    Parameters
     ----------
     train_path: str
-        path for training data
+        Path for training data.
     val_path: str
-        path for validation data
+        Path for validation data.
+    test_path: str
+        Path for testing data.
     
-    returns
+    Returns
     ----------
     train_image_path: str
-        path for images of training data
+        Path for images of training data.
     train_label_path: str
-        path for labels of trainingdata
+        Path for labels of training data.
     val_image_path: str
-        path for images of validation data
+        Path for images of validation data.
     val_label_path: str
-        path for labels of validation data
+        Path for labels of validation data.
+    test_image_path: str
+        Path for images of test data.
+    test_label_path: str
+        Path for labels of test data.
     """
     train_image_path = Path(f'{train_path}/images')
     train_label_path = Path(f'{train_path}/labels')
     val_image_path = Path(f'{val_path}/images')
     val_label_path = Path(f'{val_path}/labels')
+    test_image_path = Path(f'{test_path}/images')
+    test_label_path = Path(f'{test_path}/labels')
     
+    # Create Directory
     train_image_path.mkdir(parents=True, exist_ok=True)
     train_label_path.mkdir(parents=True, exist_ok=True)
     val_image_path.mkdir(parents=True, exist_ok=True)
     val_label_path.mkdir(parents=True, exist_ok=True)
+    test_image_path.mkdir(parents=True, exist_ok=True)
+    test_label_path.mkdir(parents=True, exist_ok=True)
     
-    return train_image_path, train_label_path, val_image_path, val_label_path
+    return train_image_path, train_label_path, val_image_path, val_label_path, test_image_path, test_label_path
 
 def export_df(df: pd.DataFrame, target_path):
     df.to_csv(target_path)
