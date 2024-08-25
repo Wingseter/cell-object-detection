@@ -212,3 +212,5 @@ Basecode/data.yaml
 Basecode/*.pt
 outputs/
 */__pycache__/
+
+*.pt

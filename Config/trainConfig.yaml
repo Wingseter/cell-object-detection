@@ -1,5 +1,5 @@
-model: "yolov8n.pt" # importent * model select 
-SAVE_PATH: "/Users/kwon/Workspace/Python/cell-detection-yolo/outputs/yolov8n"
+model: "yolov9e.pt" # importent * model select 
+SAVE_PATH: "/Users/kwon/Workspace/Python/cell-detection-yolo/outputs/yolov9e"
 
 seed: 2024
 yaml_path: "/Users/kwon/Workspace/Python/cell-detection-yolo/Data/nuinsseg_yolo/data.yaml"
